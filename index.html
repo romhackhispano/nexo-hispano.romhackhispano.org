@@ -1,0 +1,35 @@
+---
+layout: page
+---
+
+<div class="home">
+
+    <h1>Bienvenido/a</h1>
+
+    <p>Bienvenidos a El NeXo Hispano, hogar virtual de NeXaR, que de momento vive solo xD.</p>
+
+    <p>
+    El cometido principal de esta web/blog será alojar mis traducciones de videojuegos al castellano, pero como no se
+    traducen juegos de un día para otro, y algo habrá que comentar entre unas y otras, es posible que encontréis
+    cualquier otra cosa relacionada con mis otras aficiones, como el automovilismo, comentarios sobre series que haya
+    visto recientemente, o cualquier otra cosa que se me ocurra.
+    </p>
+
+    <p>Ponéos cómodos y tratad de disfrutar de lo poco que un servidor puede ofreceros.</p>
+
+    <p>NeXaR</p>
+
+    {% for post in site.posts %}
+
+        <h2>
+            <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
+        </h2>
+        <span class="post-meta">{{ post.date | date: "%b %-d, %Y" }}</span>
+        <p>
+            {{ post.excerpt }}
+        </p>
+    {% endfor %}
+
+    <p class="rss-subscribe">subscribe <a href="{{ "/feed.xml" | prepend: site.baseurl }}">via RSS</a></p>
+
+</div>
